@@ -8,15 +8,16 @@
 </head>
 <body>
     <form id="entrada-bar" onsubmit="false">
-        <input type="text" placeholder='Ingresa tu nombre' id="usuario-nombre"/> 
-        <input type="text" placeholder="Ingresa tu apellido" id="usuario-apellido"/>
-        <input type="number" placeholder="Ingresa tu edad" id="edad-usuario"/>
+        <input type="text" placeholder='Ingresa tu nombre' id="usuario-nombre" required/> 
+        <input type="text" placeholder="Ingresa tu apellido" id="usuario-apellido" required/>
+        <input type="number" placeholder="Ingresa tu edad" id="edad-usuario" required/>
         <button id="boton-ingresar">Ingresar</button>
 
 
     </form>
-    <div>
-        <h1 id="resultado"></h1>
+    <div >
+        <h1 id="resultado">Click en 'Ingresar' para saber si cumples los requisitos</h1>
+        <p id="datos"> Sus datos: </p>
     </div>
     <script type="text/javascript" src="/Tarea-2.js"></script>
 </body>

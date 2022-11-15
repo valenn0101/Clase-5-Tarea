@@ -1,24 +1,19 @@
 
-let verificacion;
-function verificarEdad(edadUsuario){
-    edadUsuario >= 18 ? verificacion= 'Bienvenido': verificacion= 'No puedes pasar'; 
-    console.log(verificacion);
-}
+const $verificarEdad = document.querySelector('#boton-ingresar');
 
 
-
-const $verificarEdad = document.querySelector('#boton-ingresar')
 
 $verificarEdad.onclick = function(){
+    const nombreUsuario = document.getElementById('usuario-nombre').value;
+    const apellidoUsuario = document.getElementById('usuario-apellido').value;
+    console.log(apellidoUsuario,nombreUsuario);
+
+
     const edadUsuario = Number(document.querySelector('#edad-usuario').value);
-    /*
-    const nombreUsuario = Text(document.querySelector('#nombre-usuario').value);
-    const apellidoUsuario = Text(document.querySelector('#apellido-usuario').value);
-    */
-    //const ingreso = verificarEdad(edadUsuario);
-   // document.querySelector('#resultado') = ingreso;
-
-    //console.log(ingreso);
-
+    let verificacion;
+    edadUsuario >= 18 ? verificacion= 'Bienvenido ' + nombreUsuario + apellidoUsuario : verificacion= 'No puedes pasar ' + nombreUsuario + apellidoUsuario; 
+    document.getElementById("resultado").innerHTML = verificacion;
+    document.getElementById('datos').innerHTML = 'Nombre: ' + nombreUsuario + ' , su apellido es: ' + apellidoUsuario + ' y su edad: ' + edadUsuario;
+    console.log(verificacion);
     return false;
 } 
