@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 3</title>
+    <title>Tarea 3 Clase 5</title>
 </head>
 <body>
+    <h1>¿Cuantas horas de clase vi?</h1>
+    <h2>Calcular tiempo del curso</h2>
     <div>
-        <form>
-            <label>¿Cuantas clases has visto?</label>
-            <input type="number" placeholder="Clases vistas" id="total-de-clases">
-            <button id="subir-clases">Cargar</button>
+        <form onsubmit="return false">
+            <label for="numero-clases">Cantidad de clases:</label>
+            <input type="number" name="numero-clases" id="numero-clases" min="1">
+            <button id="agregar-clases">Agregar clases</button>
         </form>
-        <h1 id="resultado"> </h1>
+        <form onsubmit="return false">
+            <div id="formularios"></div>
+            <button id="calcular-tiempo-total">Calcular tiempo Total</button>
+        </form>
     </div>
-    <div>
-
+    <div id="contenedor-resultados">
+        <strong id="tiempo-total"></strong>
     </div>
     <script type="text/javascript" src="/Tarea 3/Tarea-3.js"></script>
 </body>
